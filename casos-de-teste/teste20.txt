@@ -1,0 +1,58 @@
+algoritmo
+{Sem erros, vai gerar código}
+cria aluno (
+	literal [120] nome,
+	caractere [6] matricula,
+	data inicio,
+	real mediaAluno,
+	chave_primaria pkaluno (matricula)
+)
+
+cria disciplina (
+	inteiro codigo,
+	literal [30] nome,
+	hora horario,
+	chave_primaria pkdisc (codigo)
+)
+
+cria faz (
+	caractere [6] ra,
+	inteiro codigo,
+	literal [30] nomeDisc,
+	chave_primaria pkfaz (ra, codigo),
+	chave_estrangeira fk1 (ra) de aluno(matricula),
+	chave_estrangeira fk2 (codigo, nomeDisc) de disciplina(codigo, nome)
+)
+
+insere aluno (nome = "Aluno A", matricula = "8675-0", inicio = 01/10/2020, mediaAluno = 5.5)
+insere aluno (nome = "Aluno B", matricula = "3463-1", inicio = 31/01/2014, mediaAluno = 8)
+insere aluno (nome = "Aluno C", matricula = "7245-6", inicio = 25/12/2019, mediaAluno = 7.5)
+insere aluno (nome = "Aluno D", matricula = "9233-7", inicio = 04/09/2016, mediaAluno = 4)
+insere aluno (nome = "Aluno E", matricula = "0783-9", inicio = 01/10/2020, mediaAluno = 6)
+
+insere disciplina (codigo = 1, nome = "Materia 1", horario = 08:00)
+insere disciplina (codigo = 2, nome = "Materia 2", horario = 08:30)
+insere disciplina (codigo = 3, nome = "Materia 1", horario = 10:00)
+insere disciplina (codigo = 4, nome = "Materia 3", horario = 16:00)
+insere disciplina (codigo = 5, nome = "Materia 3", horario = 14:00)
+
+insere faz (ra = "3463-1", codigo = 1, nomeDisc = "Materia 1")
+insere faz (ra = "7245-6", codigo = 5, nomeDisc = "Materia 3")
+insere faz (ra = "0783-9", codigo = 5, nomeDisc = "Materia 3")
+
+escreva aluno.nome, aluno.matricula se aluno.matricula = faz.ra agrupado matricula
+escreva media(mediaAluno) de aluno
+escreva contador(nome) de disciplina se disciplina.nome = "Materia 3"
+escreva_tudo_de faz
+escreva aluno.inicio se aluno.nome = escreva aluno.nome se aluno.matricula = "0783-9" ordenado nome
+
+atualiza disciplina (nome = "Materia 4")
+atualiza aluno (nome = "Aluno F") se aluno.mediaAluno < 6
+
+escreva disciplina.nome, disciplina.horario se disciplina.codigo <> 3
+escreva_tudo_de aluno ordenado mediaAluno
+
+descarta faz
+descarta aluno
+descarta disciplina
+fim_algoritmo

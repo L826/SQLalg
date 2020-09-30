@@ -1,0 +1,30 @@
+algoritmo
+{Erro na chave estrangeira fk2 do cria faz, tipos de variável incompatível}
+cria aluno (
+	literal [120] nome,
+	literal [6] ra,
+	inteiro ano,
+	chave_primaria pkaluno (ra)
+)
+
+cria disciplina (
+	inteiro codigo,
+	literal [3] semestre,
+	inteiro ano,
+	chave_primaria pkdisc (codigo, semestre)
+)
+
+cria faz (
+	literal [6] ra,
+	inteiro codigo,
+	literal [3] sem,
+	chave_primaria pkfaz (ra, codigo, sem),
+	chave_estrangeira fk1 (ra) de aluno(ra),
+	chave_estrangeira fk2 (codigo, sem) de disciplina(semestre, semestre)
+)
+
+insere faz (ra="123456", codigo = 1, sem="abc")
+
+descarta faz
+
+fim_algoritmo

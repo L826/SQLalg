@@ -1,0 +1,28 @@
+algoritmo
+{Erro no atualiza, tabelas incompatíveis (teste de data_hora)}
+cria evento (
+	literal [20] nome,
+	data_hora horario,
+	inteiro convidados,
+	chave_primaria pkaluno (nome)
+)
+
+cria participante (
+	literal [50] nome,
+	caractere [8] documento,
+	data aniversario,
+	chave_primaria pkdisc (documento)
+)
+
+insere evento (nome = "evento 1", horario = 30/09/2020 14:10, convidados = 50)
+insere evento (nome = "evento 2", horario = 30/09/2020 12:00, convidados = 30)
+
+insere participante (nome = "Rafael", documento = "12345678", aniversario = 30/06/2010)
+insere participante (nome = "Paulo", documento = "87654321", aniversario = 30/09/2010)
+
+escreva evento.nome se evento.horario = 30/09/2020 14:10:00
+atualiza evento (horario = 30/09/2020 21:00) se evento.nome <> "Campus party"
+deleta participante se participante.nome = evento.nome
+
+escreva_tudo_de participante
+fim_algoritmo
