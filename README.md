@@ -10,15 +10,15 @@ O compilador de SQLalg foi criado usando o gerador de gramática ANTLR4 e progra
 
 1. Baixe o repositório SQLalg como arquivo .zip ou clone o repositório no seu computador.
 
-(inserir imagem aqui)
+![Download do repositório](./imagens/image1.PNG)
 
 2. Abra o NetBeans e abra o projeto que está dentro de \SQLalg-master. Caso tenha baixado o repositório como .zip, será necessário extrair o arquivo antes de abrir o projeto.
 
-(inserir imagem aqui)
+![Abrir projeto no NetBeans](./imagens/image2.PNG)
 
 3. Clique em sqlalg com o botão direito e clique em Build (Construir). Assim ele vai recompilar o projeto e gerar um arquivo de nome `sqlalg-1.0-SNAPSHOT-jar-with-dependencies.jar` dentro da pasta \target.
 
-(inserir imagem aqui)
+![Build do projeto](./imagens/image3.PNG)
 
 4. Depois de criar o arquivo .jar, abra o terminal. Nele faça o seguinte comando:
 ```
@@ -26,9 +26,11 @@ O compilador de SQLalg foi criado usando o gerador de gramática ANTLR4 e progra
 ```
 `enderecoDoProjeto` representa a pasta onde está salvo o projeto. `enderecoSaida` indica onde vai ser salvo o arquivo `saida.txt` com o(s) erro(s) identificado(s).
 
-(inserir imagem aqui)
+![Rodar projeto no terminal](./imagens/image4.PNG)
 
-No caso do teste não possuir erros, é possivel gerar um programa em SQL diretamente ao substituir .txt por .sql no terminal. Assim o programa escreve um código compilável em SQL.
+Se as etapas anteriores forem feitas corretamente, não aparecerá nenhuma mensagem no terminal e um arquivo vai ser criado no \enderecoDeSaida. Esse arquivo pode conter linhas de erro ou um código em formato SQL, se o caso de teste não possuir erros.
+
+É possivel gerar um programa em SQL diretamente ao substituir saida.txt por saida.sql no terminal. Assim o programa escreve um código compilável em SQL.
 
 Esse é o básico para usar o compilador. Há 20 casos de teste no repositório para demonstração, mas você pode usar o compilador como quiser, criando seus próprios testes e gerando novos códigos.
 
