@@ -22,9 +22,9 @@ O compilador de SQLalg foi criado usando o gerador de gramática ANTLR4 e progra
 
 4. Depois de criar o arquivo .jar, abra o terminal. Nele faça o seguinte comando:
 ```
-  java -jar enderecoDoProjeto\SQLalg-master\sqlalg\target\sqlalg-1.0-SNAPSHOT-jar-with-dependencies.jar enderecoDoProjeto\SQLalg-master\casos-de-teste\teste01.txt enderecoDeSaida\saida.txt
+  java -jar enderecoDoProjeto\SQLalg-master\sqlalg\target\sqlalg-1.0-SNAPSHOT-jar-with-dependencies.jar enderecoDoProjeto\SQLalg-master\casos-de-teste\entrada\teste01.txt enderecoDeSaida\saida.txt
 ```
-`enderecoDoProjeto` representa a pasta onde está salvo o projeto. `enderecoSaida` indica onde vai ser salvo o arquivo `saida.txt` com o(s) erro(s) identificado(s).
+`enderecoDoProjeto` representa a pasta onde está salvo o projeto. `enderecoSaida` indica onde vai ser salvo o arquivo `saida.txt` com o(s) erro(s) identificado(s). As saídas esperadas para cada caso estão em SQLalg-master\casos-de-teste\saida.
 
 ![Rodar projeto no terminal](./imagens/image4.PNG)
 
