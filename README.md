@@ -26,6 +26,7 @@ O compilador de SQLalg foi criado usando o gerador de gramática ANTLR4 e progra
 ```
 `enderecoDoProjeto` representa a pasta onde está salvo o projeto. `enderecoSaida` indica onde vai ser salvo o arquivo `saida.txt` com o(s) erro(s) identificado(s). As saídas esperadas para cada caso estão em SQLalg-master\casos-de-teste\saida.
 
+![Rodar projeto no terminal](./imagens/image4.PNG)
 
 Se as etapas anteriores forem feitas corretamente, não aparecerá nenhuma mensagem no terminal e um arquivo vai ser criado no \enderecoDeSaida. Esse arquivo pode conter linhas de erro ou um código em formato SQL, se o caso de teste não possuir erros.
 
