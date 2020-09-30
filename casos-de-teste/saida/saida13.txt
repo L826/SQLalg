@@ -1,0 +1,1 @@
+Linha 20: variavel codigo mencionada na selecao nao existe na tabela aluno

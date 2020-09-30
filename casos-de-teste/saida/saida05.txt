@@ -1,0 +1,1 @@
+Linha 22: tabela aluna mencionada na chave estrangeira nao existe

@@ -1,0 +1,1 @@
+Linha 19: tabela disciplina mencionada na insercao nao existe

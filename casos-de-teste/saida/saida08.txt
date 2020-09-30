@@ -1,0 +1,1 @@
+Linha 26: variavel med mencionada na insercao nao existe

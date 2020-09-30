@@ -1,0 +1,1 @@
+Linha 20: variaveis ano e semestre sao de tipos incompativeis

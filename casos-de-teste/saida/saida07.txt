@@ -1,0 +1,1 @@
+Linha 28: dado "dfxgh" possui cadeia de caracteres de tamanho diferente de 6

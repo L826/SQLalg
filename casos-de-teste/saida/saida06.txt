@@ -1,0 +1,1 @@
+Linha 23: variaveis codigo e semestre tem tipos diferentes

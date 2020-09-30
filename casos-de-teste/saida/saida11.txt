@@ -1,0 +1,1 @@
+Linha 20: variavel ra da selecao nao pode ser usada na agregacao

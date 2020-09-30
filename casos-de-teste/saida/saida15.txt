@@ -1,0 +1,1 @@
+Linha 25: apenas dados da tabela participante devem ser comparados no deleta

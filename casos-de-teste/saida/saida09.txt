@@ -1,0 +1,1 @@
+Linha 26: dado 666 possui um tipo incompativel

@@ -1,0 +1,22 @@
+algoritmo
+{Erro no agrupa, variável inexistente na tabela aluno}
+cria aluno (
+	literal [120] nome,
+	literal [6] ra,
+	inteiro ano,
+	chave_primaria pkaluno (ra)
+)
+
+cria disciplina (
+	inteiro codigo,
+	literal [3] semestre,
+	inteiro ano,
+	real med,
+	chave_primaria pkdisc (codigo, semestre)
+)
+
+insere disciplina (codigo = 1, semestre = "nao", ano = 2020, med = 4)
+
+escreva aluno.nome se aluno.ano < escreva aluno.ano se aluno.codigo = 123456
+
+fim_algoritmo

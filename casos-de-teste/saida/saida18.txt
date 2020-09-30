@@ -1,0 +1,2 @@
+Linha 29: tabelas aluno e disciplina sao diferentes
+Linha 29: variavel disciplina.ra nao e compativel com aluno.nome
